@@ -26,7 +26,7 @@ This repo is subject to large changes as this project evolves. To learn more abo
 
 ## Back-End url
 
-Base URL: http://localhost:5000/api - to be deployed
+Base URL: http://localhost:5000 - to be deployed
 
 ## Data Structures
 
