@@ -32,40 +32,87 @@ Base URL: http://localhost:5000 - to be deployed
 
 ### Users
 
-| data     | type   | required |
-| -------- | ------ | -------- |
-| id       | number | no       |
-| email    | string | yes      |
-| password | string | yes      |
+| data         | type   | required |
+| ------------ | ------ | -------- |
+| id           | number | no       |
+| email        | string | yes      |
+| password     | string | yes      |
+| account_type | number | yes      |
 
-### Profiles - to be added
+### Professionals
+
+| data          | type   | required |
+| ------------- | ------ | -------- |
+| user_id       | number | yes      |
+| first_name    | string | yes      |
+| last_name     | string | yes      |
+| country       | string | yes      |
+| profession    | string | yes      |
+| contact_email | string | no       |
+| phone         | string | no       |
+| bio           | string | no       |
+| links         | object | no       |
+
+### Professionals Links Object
 
 | data        | type   | required |
 | ----------- | ------ | -------- |
-| user_id     | number | yes      |
-| first_name  | string | yes      |
-| last_name   | string | yes      |
-| location    | string | yes      |
-| profession  | string | yes      |
-| bio         | string | yes      |
+| linkedin    | string | no       |
+| facebook    | string | no       |
+| instagram   | string | no       |
+| twitter     | string | no       |
+| porfolio    | string | no       |
+| other       | string | no       |
+
+### Companies
+
+| data          | type   | required |
+| ------------- | ------ | -------- |
+| user_id       | number | yes      |
+| company_name  | string | yes      |
+| location      | string | yes      |
+| sector        | string | yes      |
+| contact_email | string | no       |
+| phone         | string | no       |
+| description   | string | no       |
+| links         | object | no       |
+
+### Companies Links Object
+
+| data        | type   | required |
+| ----------- | ------ | -------- |
+| linkedin    | string | no       |
+| facebook    | string | no       |
+| instagram   | string | no       |
+| twitter     | string | no       |
+| website     | string | no       |
+| other       | string | no       |
 
 ## End Points
 
 ### Authentication Routes
 
-| Method | Endpoint          | Token Required | Description                                                          |
-| ------ | ----------------- | -------------- | -------------------------------------------------------------------- |
-| POST   | `/auth/signup` | no             | Registers a new user <br> Required: email and password.              |
-| POST   | `/auth/signin` | no             | Signs in user and returns a token.<br> Required: email and password. |
+| Method | Endpoint       | Token Required | Description                        |
+| ------ | -------------- | -------------- | ---------------------------------- |
+| POST   | `/auth/signup` | no             | Registers a new user.              |
+| POST   | `/auth/signin` | no             | Signs in user and returns a token. |
 
-### Profile Routes - to be added
+### Professionals Routes
 
-| Method | Endpoint         | Token Required | Description                  |
-| ------ | ---------------- | -------------- | ---------------------------- |
-| GET    | `/profiles`      | yes            | Returns all profiles         |
-| GET    | `/profiles /:id` | yes            | Returns single profile by id |
-| POST   | `/profiles `     | yes            | Returns newly added profile  |
-| PUT    | `/profiles/:id`  | yes            | Returns newly updated profile|
-| DELETE | `/profiles/:id`  | yes            | Deletes a single profile     |
+| Method | Endpoint              | Token Required | Description                       |
+| ------ | --------------------- | -------------- | --------------------------------- |
+| GET    | `/professionals`      | yes            | Returns all profesionals profiles |
+| GET    | `/professionals /:id` | yes            | Returns single profile by id      |
+| POST   | `/professionals `     | yes            | Returns newly added profile       |
+| PUT    | `/professionals/:id`  | yes            | Returns newly updated profile     |
+| DELETE | `/professionals/:id`  | yes            | Deletes a single profile          |
 
+### Companies Routes
 
+| Method | Endpoint          | Token Required | Description                  |
+| ------ | ----------------- | -------------- | ---------------------------- |
+| GET    | `/companies`      | yes            | Returns all company profiles |
+| GET    | `/companies /:id` | yes            | Returns single profile by id |
+| POST   | `/companies `     | yes            | Returns newly added profile  |
+| PUT    | `/companies/:id`  | yes            | Returns newly updated profile|
+| DELETE | `/companies/:id`  | yes            | Deletes a single profile     |
