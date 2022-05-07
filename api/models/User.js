@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
+// account_type: 0 = professional profile, 1 = company profile
 const userSchema = new mongoose.Schema({
     email: {
         type: String,
@@ -9,6 +10,10 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
+        required: true
+    },
+    account_type: {
+        type: Number,
         required: true
     }
 })
