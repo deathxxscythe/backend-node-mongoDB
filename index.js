@@ -1,6 +1,6 @@
 require('dotenv').config()
 require('./api/models/User')
-require('./api/models/Track')
+require('./api/models/Profiles')
 const server = require('./api/server')
 
 const mongoose = require('mongoose')

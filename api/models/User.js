@@ -13,8 +13,8 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     account_type: {
-        type: Number,
-        required: true
+        type: String,
+        required: false
     }
 })
 
