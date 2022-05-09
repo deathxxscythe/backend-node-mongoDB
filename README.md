@@ -55,6 +55,15 @@ Base URL: http://localhost:5000 - to be deployed
 | skills        | array  | no       |
 | links         | array  | no       |
 
+### Job Object
+
+| data         | type   | required |
+| ------------ | ------ | -------- |
+| title        | string | no       |
+| description  | string | no       |
+| starting     | string | no       |
+| ending       | string | no       |
+
 ## End Points
 
 ### Authentication Routes
