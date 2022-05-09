@@ -37,82 +37,44 @@ Base URL: http://localhost:5000 - to be deployed
 | id           | number | no       |
 | email        | string | yes      |
 | password     | string | yes      |
-| account_type | number | yes      |
 
-### Professionals
-
-| data          | type   | required |
-| ------------- | ------ | -------- |
-| user_id       | number | yes      |
-| first_name    | string | yes      |
-| last_name     | string | yes      |
-| country       | string | yes      |
-| profession    | string | yes      |
-| contact_email | string | no       |
-| phone         | string | no       |
-| bio           | string | no       |
-| links         | object | no       |
-
-### Professionals Links Object
-
-| data        | type   | required |
-| ----------- | ------ | -------- |
-| linkedin    | string | no       |
-| facebook    | string | no       |
-| instagram   | string | no       |
-| twitter     | string | no       |
-| porfolio    | string | no       |
-| other       | string | no       |
-
-### Companies
+### Profiles
 
 | data          | type   | required |
 | ------------- | ------ | -------- |
 | user_id       | number | yes      |
-| company_name  | string | yes      |
-| location      | string | yes      |
-| sector        | string | yes      |
+| company_name  | string | no       |
+| user_name     | string | no       |
+| location      | string | no       |
+| sector        | string | no       |
 | contact_email | string | no       |
 | phone         | string | no       |
-| description   | string | no       |
-| links         | object | no       |
-
-### Companies Links Object
-
-| data        | type   | required |
-| ----------- | ------ | -------- |
-| linkedin    | string | no       |
-| facebook    | string | no       |
-| instagram   | string | no       |
-| twitter     | string | no       |
-| website     | string | no       |
-| other       | string | no       |
+| blurb         | string | no       |
+| roles         | array  | no       |
+| jobs          | array  | no       |
+| skills        | array  | no       |
+| links         | array  | no       |
 
 ## End Points
 
 ### Authentication Routes
 
-| Method | Endpoint       | Token Required | Description                        |
-| ------ | -------------- | -------------- | ---------------------------------- |
-| POST   | `/auth/signup` | no             | Registers a new user.              |
-| POST   | `/auth/signin` | no             | Signs in user and returns a token. |
+| Method | Endpoint       | Token Required | Description                                |
+| ------ | -------------- | -------------- | ------------------------------------------ |
+| POST   | `/auth/signup` | no             | Registers new user and returns token       |
+| POST   | `/auth/signin` | no             | Signs in registered user and returns token |
 
-### Professionals Routes
+### Profiles Routes
 
-| Method | Endpoint              | Token Required | Description                       |
-| ------ | --------------------- | -------------- | --------------------------------- |
-| GET    | `/professionals`      | yes            | Returns all profesionals profiles |
-| GET    | `/professionals /:id` | yes            | Returns single profile by id      |
-| POST   | `/professionals `     | yes            | Returns newly added profile       |
-| PUT    | `/professionals/:id`  | yes            | Returns newly updated profile     |
-| DELETE | `/professionals/:id`  | yes            | Deletes a single profile          |
+| Method | Endpoint                 | Token Required | Description                              |
+| ------ | ------------------------ | -------------- | ---------------------------------------- |
+| GET    | `/profiles`              | yes            | Returns all profiles                     |
+| GET    | `/profiles/:id`          | yes            | Returns single profile by id             |
+| POST   | `/profiles`              | yes            | Returns newly added profile              |
+| GET    | `/profiles/user-profile` | yes            | Returns the current user's profile       |
+| PUT    | `/profiles/user-profile` | yes            | Returns the user's newly updated profile |
+| DELETE | `/profiles/user-profile` | yes            | Deletes a single profile                 |
+| GET    | `/profiles/companies`    | yes            | Returns all company profiles             |
+| GET    | `/profiles/professionals`| yes            | Retruns all "professionals" profiles     |
 
-### Companies Routes
 
-| Method | Endpoint          | Token Required | Description                  |
-| ------ | ----------------- | -------------- | ---------------------------- |
-| GET    | `/companies`      | yes            | Returns all company profiles |
-| GET    | `/companies /:id` | yes            | Returns single profile by id |
-| POST   | `/companies `     | yes            | Returns newly added profile  |
-| PUT    | `/companies/:id`  | yes            | Returns newly updated profile|
-| DELETE | `/companies/:id`  | yes            | Deletes a single profile     |
