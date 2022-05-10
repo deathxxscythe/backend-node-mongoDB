@@ -26,6 +26,8 @@ This repo is subject to large changes as this project evolves. To learn more abo
 
 • Npm run server - rup app with nodemon
 
+• Npm run test - to be added
+
 ## Back-End url
 
 Base URL: http://localhost:5000 - to be deployed
