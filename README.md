@@ -78,13 +78,13 @@ Base URL: http://localhost:5000 - to be deployed
 | Method | Endpoint                      | Token Required | Description                               |
 | ------ | ------------------------------| -------------- | ----------------------------------------  |
 | GET    | `/profiles/companies`         | yes            | Returns all company profiles              |
-| GET    | `/profiles/professionals`     | yes            | Retruns all "professionals" profiles      |
 | GET    | `/profiles/companies/:id`     | yes            | Returns single company profile by id      |
+| GET    | `/profiles/professionals`     | yes            | Retruns all "professionals" profiles      |
 | GET    | `/profiles/professionals/:id` | yes            | Returns single professional profile by id |
-| POST   | `/profiles`                   | yes            | Returns newly added profile               |
-| GET    | `/profiles/user-profile`      | yes            | Returns the current user's profile        |
-| PUT    | `/profiles/user-profile`      | yes            | Returns the user's newly updated profile  |
-| DELETE | `/profiles/user-profile`      | yes            | Deletes the user's profile                |
+| POST   | `/account/profile`            | yes            | Returns newly added profile               |
+| GET    | `/account/profile`            | yes            | Returns the current user's profile        |
+| PUT    | `/account/profile`            | yes            | Returns the user's newly updated profile  |
+| DELETE | `/account/profile`            | yes            | Deletes the user's profile                |
 
 
 
