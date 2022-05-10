@@ -2,9 +2,11 @@
 
 This repo is subject to large changes as this project evolves. To learn more about the over all project please visit the repo listed below.
 
-## Related Frontend Repo
+## Related Repos
 
-[React Native App](https://github.com/Dionne-Stratton/grow-work-frontend-react-native)
+[Desktop Web App](https://github.com/Dionne-Stratton/grow-work-frontend-react)
+
+[Native Mobile App](https://github.com/Dionne-Stratton/grow-work-frontend-react-native)
 
 ## Tech Stack - subject to change
 
