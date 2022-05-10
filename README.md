@@ -28,6 +28,11 @@ This repo is subject to large changes as this project evolves. To learn more abo
 
 • Npm run test - to be added
 
+• You'll need to create your own .env file with:
+
+MONGODB_URL={your_key_here}
+JWT_SECRET={your_secret_here}
+
 ## Back-End url
 
 Base URL: http://localhost:5000 - to be deployed
