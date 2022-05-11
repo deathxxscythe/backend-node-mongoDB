@@ -4,9 +4,9 @@ This repo is subject to large changes as this project evolves. To learn more abo
 
 ## Related Repos
 
-[Desktop Web App](https://github.com/Dionne-Stratton/grow-work-frontend-react)
+[Native Mobile App](https://github.com/Grow-Work/frontend-react-native)
 
-[Native Mobile App](https://github.com/Dionne-Stratton/grow-work-frontend-react-native)
+[Desktop Web App](https://github.com/Grow-Work/frontend-react-desktop)
 
 ## Tech Stack - subject to change
 
