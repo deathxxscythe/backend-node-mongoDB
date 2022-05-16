@@ -33,9 +33,9 @@ This repo is subject to large changes as this project evolves. To learn more abo
 MONGODB_URL={your_key_here}
 JWT_SECRET={your_secret_here}
 
-## Back-End url
+## Base url
 
-Base URL: http://localhost:5000 - to be deployed
+Base URL: https://grow-work.herokuapp.com/
 
 ## Data Structures
 
